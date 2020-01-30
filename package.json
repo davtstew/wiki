@@ -363,5 +363,8 @@
     "type": "opencollective",
     "url": "https://opencollective.com/wikijs",
     "logo": "https://opencollective.com/opencollective/logo.txt"
+  },
+"jest":{
+    "testResultsProcessor": "jest-teamcity-reporter"
   }
 }
