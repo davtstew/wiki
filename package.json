@@ -10,7 +10,7 @@
     "dev": "node dev",
     "build": "webpack --profile --config dev/webpack/webpack.prod.js",
     "watch": "webpack --config dev/webpack/webpack.dev.js",
-    "test": "eslint --format codeframe --ext .js,.vue . && pug-lint server/views && jest"
+    "test": "eslint --format ./node_modules/eslint-teamcity/index.js --ext .js,.vue . && pug-lint server/views && jest"
   },
   "repository": {
     "type": "git",
