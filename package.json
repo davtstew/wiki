@@ -1,6 +1,6 @@
 {
   "name": "wiki",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "releaseDate": "2019-01-01T01:01:01.000Z",
   "description": "A modern, lightweight and powerful wiki app built on NodeJS, Git and Markdown",
   "main": "wiki.js",
@@ -10,7 +10,7 @@
     "dev": "node dev",
     "build": "webpack --profile --config dev/webpack/webpack.prod.js",
     "watch": "webpack --config dev/webpack/webpack.dev.js",
-    "test": "eslint --format codeframe --ext .js,.vue . && pug-lint server/views && jest"
+    "test": "eslint --format ./node_modules/eslint-teamcity/index.js --ext .js,.vue . && pug-lint server/views && jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "node": ">=10.12"
   },
   "dependencies": {
+    "jest-teamcity-reporter": "^0.6.2",
     "@aoberoi/passport-slack": "1.0.5",
     "@azure/storage-blob": "12.0.2",
     "@bugsnag/js": "6.5.0",
@@ -231,6 +232,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "eslint-plugin-vue": "6.1.2",
+    "eslint-teamcity":"2.2.0",
     "fibers": "4.0.2",
     "file-loader": "5.0.2",
     "filepond": "4.9.4",
@@ -362,5 +364,8 @@
     "type": "opencollective",
     "url": "https://opencollective.com/wikijs",
     "logo": "https://opencollective.com/opencollective/logo.txt"
+  },
+"jest":{
+    "testResultsProcessor": "jest-teamcity-reporter"
   }
 }
